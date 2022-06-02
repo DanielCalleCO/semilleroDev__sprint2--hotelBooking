@@ -1,0 +1,13 @@
+.darkMode {
+    background-color: #0808089c;
+}
+
+/*?--------------------------------------------------- SEGUNDO MEDIA QUERY */
+@media (min-width: 1024px) {
+    .darkMode {
+        background-color: transparent;
+    }
+    .darkModeBG {
+        background-color: #0808089c;
+    }
+}

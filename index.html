@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Book it! | Daniel Calle</title>
+        <link rel="stylesheet" type="text/css" href="./src/styles.css" />
+        <link rel="stylesheet" type="text/css" href="./src/styles.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./src/theme/darkMode.css"
+        />
+    </head>
+    <body id="body">
+        <header id="header" class="body__header">
+            <section class="body__header--upper">
+                <h1 class="header__upper--title">Book it!</h1>
+                <div class="header__upper--icon">
+                    <img
+                        id="hideBtn"
+                        class="upper__icon--hidefilter"
+                        src="./resources/icons/tune_white_24dp.svg"
+                        alt="Tune"
+                    />
+                    <img
+                        id="darkModeBtn"
+                        class="upper__icon--darkmode"
+                        src="./resources/icons/darkmode.svg"
+                        alt="Darkmode"
+                    />
+                </div>
+            </section>
+            <form id="formfilters">
+                <section class="body__header--filter" id="filterzone">
+                    <!--! Filtro de Country -->
+                    <div class="header__filter--country">
+                        <img
+                            src="./resources/icons/countries.svg"
+                            alt="Country"
+                        />
+                        <select
+                            id="country"
+                            class="filter__country--select filter"
+                        >
+                            <option value="None" selected>All contries</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Uruguay">Uruguay</option>
+                        </select>
+                    </div>
+                    <!--! Filtro de checkin -->
+                    <div class="header__filter--checkin">
+                        <img
+                            src="./resources/icons/checkin.svg"
+                            alt="Checkin"
+                        />
+                        <input
+                            type="date"
+                            id="checkin"
+                            name="checkin"
+                            class="filter"
+                        />
+                    </div>
+                    <!--! Filtro de checkout -->
+                    <div class="header__filter--checkout">
+                        <img
+                            src="./resources/icons/checkout.svg"
+                            alt="Checkout"
+                        />
+                        <input
+                            class="filter"
+                            type="date"
+                            id="checkout"
+                            name="checkout"
+                        />
+                    </div>
+                    <!--! Filtro de precios -->
+                    <div class="header__filter--prices">
+                        <img src="./resources/icons/price.svg" alt="Prices" />
+                        <select
+                            id="prices"
+                            class="filter__prices--select filter"
+                        >
+                            <option value="None" selected>All prices</option>
+                            <option value="1">$</option>
+                            <option value="2">$$</option>
+                            <option value="3">$$$</option>
+                            <option value="4">$$$$</option>
+                        </select>
+                    </div>
+                    <!--! Filtro de sizes -->
+                    <div class="header__filter--sizes">
+                        <img src="./resources/icons/rooms.svg" alt="Sizes" />
+                        <select id="sizes" class="filter__sizes--select filter">
+                            <option value="None" selected>All sizes</option>
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
+                    </div>
+                    <!--!  Boton CLEAR -->
+                    <section class="header__filter--clear">
+                        <div class="filter__clearpush"></div>
+                        <button
+                            id="clear"
+                            class="filter__btnclear"
+                            type="reset"
+                        >
+                            Clear
+                        </button>
+                    </section>
+                </section>
+            </form>
+            <section class="body__header--bottom">
+                <div class="header__bottom--mesagge">
+                    <p>We have found for you...</p>
+                </div>
+                <div id="filter__result" class="header__bottom--result"></div>
+            </section>
+        </header>
+        <main>
+            <!--! Cards de los hoteles -->
+            <section id="hotelsSection" class="body__main--cards"></section>
+        </main>
+        <footer></footer>
+        <script type="module" src="./src/index.js"></script>
+    </body>
+</html>

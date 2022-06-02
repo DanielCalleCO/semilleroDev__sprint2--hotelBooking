@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Roboto:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+
+.body__header {
+    background-image: url("../resources/images/cover.png");
+    background-position: center;
+    box-shadow: inset 0 0 0 10000px #0000006a;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: fit-content;
+    padding-bottom: 5px;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    min-width: 300px;
+}
+
+.body__header--upper {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+/*! Title */
+.header__upper--title {
+    height: 45px;
+    font-family: "Pacifico", cursive;
+    color: #fff;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+}
+/*! iconos */
+.upper__icon--hidefilter {
+    background-color: rgb(59, 59, 59);
+    border-radius: 50%;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.hidder {
+    display: none;
+}
+
+.upper__icon--darkmode {
+    background-color: rgb(59, 59, 59);
+    border-radius: 50%;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.body__header--filter {
+    margin: 0px 16px 10px;
+    border-radius: 8px;
+    padding: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #ffffff9c;
+}
+
+.body__header--filter img {
+    height: 14px;
+    margin-left: 5px;
+}
+
+.body__header--filter select {
+    width: 90%;
+    border: none;
+    background-color: transparent;
+}
+
+/*! Filtro de Country */
+.header__filter--country {
+    width: 100%;
+    height: 30px;
+    background-color: #ffffffb9;
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+/*! Filtro de Checkin */
+.header__filter--checkin {
+    width: 49%;
+    height: 30px;
+    background-color: #ffffffb9;
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    position: relative;
+}
+
+.header__filter--checkin input {
+    border: none;
+    background-color: transparent;
+    padding-left: 5px;
+}
+
+/*! Filtro de Checkout */
+.header__filter--checkout {
+    width: 49%;
+    height: 30px;
+    background-color: #ffffffb9;
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    position: relative;
+}
+
+.header__filter--checkout input {
+    border: none;
+    background-color: transparent;
+    padding-left: 5px;
+}
+
+/*! Filtro de Prices */
+.header__filter--prices {
+    width: 49%;
+    height: 30px;
+    background-color: #ffffffb9;
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+/*! Filtro de Sizes */
+.header__filter--sizes {
+    width: 49%;
+    height: 30px;
+    background-color: #ffffffb9;
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.header__filter--clear {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.filter__clearpush {
+    width: 85%;
+}
+
+.filter__btnclear {
+    height: 19px;
+    width: 59px;
+    background-color: #333333df;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto";
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: solid 1px #fff;
+}
+
+.body__header--bottom {
+    display: none;
+}
+
+/*! estilos filtros */
+input[type="date" i]::-webkit-calendar-picker-indicator {
+    background: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+input {
+    outline: none;
+}
+
+.filter {
+    outline: none;
+}
+
+.filter:focus::after {
+    outline: none;
+    border: none;
+}
+
+/*! Seccion de cards de hoteles */
+.body__main--cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 5px;
+}
+
+.main__cards--hotelCard {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 6px 10px;
+    height: 170px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.cards__img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.cards__shadow {
+    position: absolute;
+    border-radius: 15px;
+    background: linear-gradient(to bottom, #0000003c, #000000c0);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.cards__shadow:hover {
+    background: linear-gradient(to bottom, #000000c0, #0000003c);
+}
+
+/* .cards__info:hover {
+    display: none;
+} */
+
+.cards__info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    align-items: baseline;
+}
+
+.cards__info--plusBtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: #333333df;
+    color: #fff;
+    font-size: larger;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.cards__info--title {
+    width: 90%;
+    height: fit-content;
+    font-size: 1.1em;
+}
+
+.cards__info--country {
+    margin-top: 10px;
+    width: 83%;
+    display: flex;
+    align-items: center;
+}
+
+.country__icon {
+    margin-right: 5px;
+    width: 19px;
+}
+
+.cards__info--rooms {
+    margin: 10px 10px 0px 0px;
+}
+
+.cards__info--price {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.cards__info--bookitBtn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 20px;
+    border-radius: 6px;
+    border: solid 1px #fff;
+    background-color: #333333df;
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*?--------------------------------------------------- PRIMER MEDIA QUERY */
+@media (min-width: 768px) {
+    .body__header {
+        background-position: center;
+    }
+
+    /*! Title */
+    .header__upper--title {
+        height: 95px;
+        font-size: 3em;
+    }
+
+    /*! Sección de filtros */
+    .body__header--filter div {
+        width: 31%;
+        max-width: 300px;
+    }
+
+    /*! Boton Clear */
+    .header__filter--clear {
+        display: flex;
+        width: 31%;
+    }
+
+    .main__cards--hotelCard {
+        width: 46%;
+    }
+}
+
+/*?--------------------------------------------------- SEGUNDO MEDIA QUERY */
+@media (min-width: 1024px) {
+    .body__header--filter select {
+        width: 85%;
+    }
+
+    .body__header--upper {
+        padding: 45px;
+    }
+
+    /*! Title */
+    .header__upper--title {
+        height: 145px;
+        font-size: 5em;
+    }
+
+    .upper__icon--hidefilter {
+        display: none;
+    }
+
+    /*! Sección de filtros */
+    .body__header--filter {
+        background-color: transparent;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .body__header--filter div {
+        width: 15%;
+        max-width: 180px;
+        margin: 0px 10px 0px 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    .header__filter--clear {
+        width: 15%;
+        display: inline;
+        /* display:  */
+        /* align-items: center;
+        justify-content: flex-start; */
+    }
+
+    .filter__btnclear {
+        height: 30px;
+    }
+
+    .filter__clearpush {
+        display: none;
+    }
+
+    .body__header--bottom {
+        margin-top: 20px;
+        display: unset;
+    }
+
+    .header__bottom--mesagge {
+        height: 72px;
+        width: 438px;
+        display: flex;
+        margin-left: 44px;
+    }
+
+    .header__bottom--mesagge p {
+        font-family: "Dancing Script", cursive;
+        font-size: 48px;
+        color: #fff;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    /*! Seccion de cards de hoteles */
+    .body__main--cards {
+        width: 100%;
+        max-width: 1500px;
+    }
+
+    .main__cards--hotelCard {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 6px 10px;
+        height: 170px;
+        width: 100%;
+        min-width: 300px;
+        max-width: 450px;
+    }
+}
